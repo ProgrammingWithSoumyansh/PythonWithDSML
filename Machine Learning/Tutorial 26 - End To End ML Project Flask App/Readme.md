@@ -1,0 +1,1 @@
+Create Virtual Environment before running the app using the requirements.txt
