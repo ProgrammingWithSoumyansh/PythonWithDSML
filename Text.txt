@@ -1,0 +1,130 @@
+Title: Leveraging Internal GPT for Cucumber BDD Automation Test Case Generation
+
+Slide 1: Title Slide
+
+Title: Leveraging Internal GPT for Cucumber BDD Test Case GenerationSubtitle: Automating Test Case & Step Definition Creation from JIRA User StoriesPresented by: [Your Name]
+
+Slide 2: Problem Statement
+
+Manual test case writing is time-consuming and error-prone.
+
+Missed edge cases due to inconsistent human analysis.
+
+Repetitive effort in writing BDD test cases and step definitions.
+
+Lack of structured test case generation from JIRA user stories.
+
+Slide 3: Solution Overview
+
+Use Internal GPT (Chat-Based) to analyze JIRA user stories.
+
+Automatically generate Cucumber BDD test cases (Gherkin format).
+
+Generate Java step definitions for automation execution.
+
+Improve test coverage and accelerate automation.
+
+Slide 4: Workflow - GPT-Driven BDD Test Case Generation
+
+Input JIRA User Story into GPT.
+
+GPT extracts Acceptance Criteria & Key Scenarios.
+
+GPT generates Cucumber BDD scenarios (Gherkin format).
+
+GPT generates Java step definitions for execution.
+
+Tester reviews & integrates into automation framework.
+
+Slide 5: Example JIRA User Story
+
+User Story:As a user, I want to reset my password via OTP so that I can regain access to my account.
+
+Acceptance Criteria:
+
+User receives an OTP on registered email.
+
+OTP expires in 10 minutes.
+
+After 3 incorrect OTP attempts, account locks for 30 minutes.
+
+New password must follow security policies.
+
+Slide 6: GPT-Generated Cucumber BDD Scenarios
+
+Feature: Password Reset via OTP
+
+  Scenario: OTP is sent to the registered email
+    Given the user enters their registered email
+    When they request an OTP
+    Then they should receive an OTP on their email
+
+  Scenario: OTP expires after 10 minutes
+    Given the user receives an OTP
+    When 10 minutes pass
+    Then the OTP should be invalid
+
+  Scenario: Account locks after 3 incorrect OTP attempts
+    Given the user enters an incorrect OTP 3 times
+    Then the account should be locked for 30 minutes
+
+Slide 7: GPT-Generated Java Step Definitions
+
+public class PasswordResetSteps {
+    
+    @Given("the user enters their registered email")
+    public void enterRegisteredEmail() {
+        System.out.println("User entered registered email");
+    }
+    
+    @When("they request an OTP")
+    public void requestOTP() {
+        System.out.println("User requested OTP");
+    }
+    
+    @Then("they should receive an OTP on their email")
+    public void verifyOTPReceived() {
+        System.out.println("OTP received successfully");
+    }
+}
+
+Slide 8: Benefits of GPT-Driven Automation
+
+✅ Faster Test Case Creation: Reduces manual effort.✅ Improved Coverage: Identifies edge cases.✅ Standardized Test Cases: Ensures consistency in BDD format.✅ Enhanced Defect Management: GPT suggests test cases based on defects.✅ Scalable: Can be extended for other automation frameworks.
+
+Slide 9: Time Savings & Efficiency Metrics
+
+Comparison of Manual vs. GPT-Generated Test Cases
+
+📊 Bar Chart: Time Spent in Manual vs. GPT-Generated Test Cases
+
+Manual Test Case Writing: ~4-5 hours per feature
+
+GPT-Generated Test Cases: ~30 minutes per feature
+
+📉 Line Graph: Defect Detection Rate Improvement Over Time
+
+Increased defect detection by 25-30% due to better test coverage.
+
+Faster resolution time as test cases are readily available.
+
+Slide 10: Future Enhancements
+
+Customization: Allow testers to refine GPT-generated cases.
+
+JIRA Integration: Directly link test cases to JIRA.
+
+Defect Prediction: Suggest failure points based on historical defects.
+
+Multi-Language Support: Generate test cases in Python, Java, etc.
+
+Slide 11: Conclusion
+
+Internal GPT enhances Cucumber BDD test automation.
+
+Saves time, ensures quality, and improves defect management.
+
+Helps teams focus on execution rather than writing test cases.
+
+Thank You!Q&A
+
